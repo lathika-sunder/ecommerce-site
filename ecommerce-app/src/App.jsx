@@ -11,6 +11,7 @@ import LoginPage from './pages/Loginpage/LoginPage'
 import SignUpPage from './pages/SignUpPage/SignUpPage'
 import ProductDetailsPage from './pages/ProductDeails/ProductDetailsPage'
 import { BrowserRouter,Route,Routes } from 'react-router-dom'
+import Footer from './components/Footer/Footer'
 function App() {
   
   return (
@@ -32,7 +33,7 @@ function App() {
     <Route exact path="/signup" element={<SignUpPage />}></Route>
     <Route exact path="/login" element={<LoginPage />}></Route>
   </Routes>
-  
+  <Footer/>
   
 </BrowserRouter>
      

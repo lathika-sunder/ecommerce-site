@@ -1,76 +1,153 @@
-
-
-.logo img{
-    height: 10vh;
-    padding: 2vh;
+.logo img {
+  height: 8vh;
+  padding: 1vh;
+}
+.user-img img {
+  height: 6vh;
+  cursor: pointer;
+  margin-left: 2vh;
+}
+* {
+  user-select: none;
+  border: none;
+  margin: 0px;
+}
+.icon svg {
+  height: 3vh;
+  margin-right: 1vh;
+}
+.nav__wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* background-color: #befa6b4f; */
+  padding-top: 1vh;
+  height: 10vh;
+}
+.nav__link {
+  display: flex;
+  flex-direction: row;
+  text-decoration: none;
+  font-size: 2.5vh;
+}
+.nav__item {
+  margin: 3vh;
+}
+.navigation,
+.menu {
+  display: flex;
+  flex-direction: row;
+  align-items: top;
+}
+li {
+  list-style: none;
+}
+.main-header {
+  display: flex;
+  flex-direction: row;
+}
+.buttons {
+  margin-top: 0px;
+  display: flex;
+  flex-direction: row;
+}
+.main-header h1 {
+  font-size: 3.5vh;
+  margin-bottom: 1vh;
+}
+.main-header p {
+  font-size: 2vh;
+  margin-top: 0px;
+}
+.btn__clr {
+  background-color: #28a745;
+  padding: 2vh;
+  color: white;
+  cursor: pointer;
+  border-radius: 10px;
+  margin-top: 0px;
+}
+.btn__plain {
+  border: 1px solid #1d7431;
+  background-color: white;
+  padding: 2vh;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  border-radius: 10px;
+  margin-top: 0px;
 }
 
-*{
-    user-select:none;
-    border:none;
-    margin: 0px;
+.navigation {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
-.icon svg{
-    height: 4vh;
-    margin-right: 3vh;
+
+.buttons {
+  display: flex;
+  align-items: center;
 }
-.nav__wrapper{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    background-color: #BEFA6B;
-    padding-top: 3vh;
-    height: 15vh;
+
+.icons {
+  display: flex;
+  flex-direction: row;
+  padding: 0vh;
+  margin: 0vh;
 }
-.nav__link{
-    display: flex;
-    flex-direction: row;
-    text-decoration: none;
-    font-size: 3vh;
+.icons img {
+  padding: 0vh;
 }
-.nav__item{
-    margin: 5vh;
+.user-img img {
+  margin: 6.6vh;
 }
-.menu{
-    display: flex;
-    flex-direction: row;
-}
-li{
-    list-style: none;
-}
-.main-header{
-    display: flex;
-    flex-direction: row;
-    
-}
-.buttons{
-    padding-top: 0px;
-    display: flex;
-    flex-direction: row;
-    
-}
-.main-header h1{
-    font-size: 5vh;
-    margin-bottom: 1vh;
-}
-.main-header p{
-    font-size: 2vh;
-    margin-top: 0px;
-}
-.btn__clr{
-    background-color: #28a745;
-    padding: 2vh;
-    color: white;
-    cursor: pointer;
-    border-radius: 10px;
-    margin-top: 0px;
-}
-.btn__plain{
-    border:1px solid #1D7431;
-    background-color: white;
-    padding: 2vh;
-    color: rgb(0, 0, 0);
-    cursor: pointer;
-    border-radius: 10px;
-    margin-top: 0px;
-}
+/* ... (your existing styles) */
+
+/* CSS for mobile screens */
+@media (max-width: 768px) {
+    .menu .nav__item {
+      display: none; /* Hide menu items by default on mobile screens */
+      
+    }
+  
+    .menu-toggle {
+      display: block;
+      cursor: pointer;
+      /* Add styles for the menu toggle button, like padding and background color */
+    }
+  
+    .mobile-menu {
+      display: block;
+
+      /* Add styles for the mobile menu, like positioning, background color, etc. */
+    }
+  
+    .mobile-menu-list {
+      list-style: none;
+      padding: 0;
+      
+    }
+  
+    .mobile-menu-list .nav__item {
+      display: block; /* Display menu items in a block on mobile screens */
+      font-size:2vh;
+      padding: 10px 20px; /* Add padding to menu items for better touch interaction */text-decoration: none;
+      /* Add other styles for mobile menu items */
+    }
+    .mobile-menu .nav__item{
+        text-decoration: none;
+        padding: 1vh;
+        border-bottom:1px solid  black;
+    }
+    a{
+        text-decoration: none;
+    }
+   
+      
+  }
+  
+ .nav__item .active{
+    color:#ff5e3a !important;
+    font-size: 200vh;
+ }

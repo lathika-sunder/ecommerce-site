@@ -1,0 +1,69 @@
+/* Default styles for larger screens */
+.image img {
+  height: 85vh;
+  width: 150vh;
+  padding: 3vh;
+}
+
+.main-slide {
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(24, 27, 21);
+}
+
+.content {
+  color: aliceblue;
+}
+
+.btn__plain {
+  border: 1px solid #1d7431;
+  background-color: white;
+  padding: 2vh;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  border-radius: 10px;
+  margin:2vh;
+}
+
+.headers {
+  padding: 3vh;
+  font-size: larger;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.paragraph {
+  font-size: 2vh;
+  margin: 3vh;
+  line-height: 3.5vh;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .image img {
+    height: 50vh;
+    width: 65vh;
+    padding: 0px;
+  }
+  .button{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 1vh;
+  }
+  .main-slide {
+    flex-direction: column;
+  }
+  
+  .headers {
+    font-size: 4vh;
+    display: flex;
+    flex-direction: row;
+    
+  }
+  
+  .paragraph {
+    font-size: 1.8vh;
+    line-height: 3vh;
+  }
+}
