@@ -12,8 +12,19 @@ import LoginPage from "../pages/Loginpage/LoginPage";
 const Routers = () => {
   return (
     <BrowserRouter>
+      <nav>
+        <ul>
+          <li><Link to="/home">Home</Link></li>
+          <li><Link to="/shop">Shop</Link></li>
+          <li><Link to="/shop/:id">Product Details</Link></li>
+          <li><Link to="/cart">Cart</Link></li>
+          <li><Link to="/checkout">Checkout</Link></li>
+          <li><Link to="/signup">Sign Up</Link></li>
+          <li><Link to="/login">Login</Link></li>
+        </ul>
+      </nav>
       <Routes>
-        <Route exact path="/" element={<Layout />}></Route>
+        
         <Route exact path="/home" element={<HomePage />}></Route>
         <Route exact path="/shop" element={<ShopPage />}></Route>
         <Route exact path="/shop/:id" element={<ProductDetailsPage />}></Route>
