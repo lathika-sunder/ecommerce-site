@@ -11,29 +11,28 @@ import LoginPage from "../pages/Loginpage/LoginPage";
 
 const Routers = () => {
   return (
-    <BrowserRouter>
-      <nav>
-        <ul>
-          <li><Link to="/home">Home</Link></li>
-          <li><Link to="/shop">Shop</Link></li>
-          <li><Link to="/shop/:id">Product Details</Link></li>
-          <li><Link to="/cart">Cart</Link></li>
-          <li><Link to="/checkout">Checkout</Link></li>
-          <li><Link to="/signup">Sign Up</Link></li>
-          <li><Link to="/login">Login</Link></li>
-        </ul>
-      </nav>
-      <Routes>
+    <></>
+    // <BrowserRouter>
+      
+    //       {/* <li><Link to="/home">Home</Link></li>
+    //       <li><Link to="/shop">Shop</Link></li>
+    //       <li><Link to="/shop/:id">Product Details</Link></li>
+    //       <li><Link to="/cart">Cart</Link></li>
+    //       <li><Link to="/checkout">Checkout</Link></li>
+    //       <li><Link to="/signup">Sign Up</Link></li>
+    //       <li><Link to="/login">Login</Link></li> */}
+    
+    //   <Routes>
         
-        <Route exact path="/home" element={<HomePage />}></Route>
-        <Route exact path="/shop" element={<ShopPage />}></Route>
-        <Route exact path="/shop/:id" element={<ProductDetailsPage />}></Route>
-        <Route exact path="/cart" element={<CartPage />}></Route>
-        <Route exact path="/checkout" element={<CheckoutPage />}></Route>
-        <Route exact path="/signup" element={<SignUpPage />}></Route>
-        <Route exact path="/login" element={<LoginPage />}></Route>
-      </Routes>
-    </BrowserRouter>
+    //     <Route exact path="/home" element={<HomePage />}></Route>
+    //     <Route exact path="/shop" element={<ShopPage />}></Route>
+    //     <Route exact path="/shop/:id" element={<ProductDetailsPage />}></Route>
+    //     <Route exact path="/cart" element={<CartPage />}></Route>
+    //     <Route exact path="/checkout" element={<CheckoutPage />}></Route>
+    //     <Route exact path="/signup" element={<SignUpPage />}></Route>
+    //     <Route exact path="/login" element={<LoginPage />}></Route>
+    //   </Routes>
+    // </BrowserRouter>
   );
 };
 

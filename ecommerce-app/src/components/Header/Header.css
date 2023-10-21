@@ -1,0 +1,76 @@
+
+
+.logo img{
+    height: 10vh;
+    padding: 2vh;
+}
+
+*{
+    user-select:none;
+    border:none;
+    margin: 0px;
+}
+.icon svg{
+    height: 4vh;
+    margin-right: 3vh;
+}
+.nav__wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #BEFA6B;
+    padding-top: 3vh;
+    height: 15vh;
+}
+.nav__link{
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    font-size: 3vh;
+}
+.nav__item{
+    margin: 5vh;
+}
+.menu{
+    display: flex;
+    flex-direction: row;
+}
+li{
+    list-style: none;
+}
+.main-header{
+    display: flex;
+    flex-direction: row;
+    
+}
+.buttons{
+    padding-top: 0px;
+    display: flex;
+    flex-direction: row;
+    
+}
+.main-header h1{
+    font-size: 5vh;
+    margin-bottom: 1vh;
+}
+.main-header p{
+    font-size: 2vh;
+    margin-top: 0px;
+}
+.btn__clr{
+    background-color: #28a745;
+    padding: 2vh;
+    color: white;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-top: 0px;
+}
+.btn__plain{
+    border:1px solid #1D7431;
+    background-color: white;
+    padding: 2vh;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    border-radius: 10px;
+    margin-top: 0px;
+}
