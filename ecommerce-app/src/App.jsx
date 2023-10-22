@@ -13,6 +13,8 @@ import ProductDetailsPage from "./pages/ProductDeails/ProductDetailsPage";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
+
+import ProductsComp from "./components/ProductsComp/ProductsComp";
 function App() {
   return (
     <>
@@ -20,19 +22,22 @@ function App() {
         <Header />
 
         <Routes>
-          <Route exact path="/home" element={<HomePage />}></Route>
-          <Route exact path="/shop" element={<ShopPage />}></Route>
           <Route
             exact
             path="/shop/:id"
             element={<ProductDetailsPage />}
           ></Route>
-          <Route exact path="/cart" element={<CartPage />}></Route>
+          {/* <Route exact path="/cart" element={<CartPage />}></Route> */}
           <Route exact path="/checkout" element={<CheckoutPage />}></Route>
           <Route exact path="/signup" element={<SignUpPage />}></Route>
           <Route exact path="/login" element={<LoginPage />}></Route>
-        </Routes>
-      
+     
+       
+            <Route exact path="/home" element={<HomePage />}></Route>
+            <Route exact path="/shop" element={<ShopPage />}></Route>
+            <Route exact path="/cart" element={<CartPage />} />
+          </Routes>
+  
       </BrowserRouter>
     </>
   );

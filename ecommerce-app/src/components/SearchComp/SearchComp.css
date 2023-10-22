@@ -1,0 +1,11 @@
+.search-container input{
+    border-radius: 2vh;
+}
+
+.search-container input:active{
+    border: 0px white solid ;
+}
+.search-container button{
+   cursor: pointer;
+  
+}

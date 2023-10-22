@@ -1,17 +1,26 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { motion, AnimatePresence } from "framer-motion";
 import "./ProductsComp.css";
 import StarRating from "../StarRating/StarRating";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFire } from "@fortawesome/free-solid-svg-icons";
 
 const ProductsComp = () => {
   const [data, setData] = useState([]);
-  const [isVisible, setIsVisible] = useState(false);
-
-  const successNotify = () => {
-    toast.success("Product added to cart!");
+  const [cartItems, setCartItems] = useState([]);
+  const successNotify = async (product) => {
+    
+    try {
+        setCartItems([...cartItems, product]); // Add the clicked product to the cartItems state
+        await axios.post("http://localhost:3000/api/cart-products", cartItems);
+        console.log("Product added Successfully",cartItems)
+        toast.success("Added to Cart");
+      } catch (error) {
+        console.error("Error adding product to cart:", error);
+        toast.error("Failed to add product to Cart");
+      }
   };
 
   useEffect(() => {
@@ -19,39 +28,33 @@ const ProductsComp = () => {
       try {
         const response = await axios.get("http://localhost:3000/api/products");
         setData(response.data);
-        setIsVisible(true);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
     };
 
-    fetchProducts();
+    fetchProducts(); // Call fetchProducts immediately after defining it
   }, []); // Empty dependency array ensures useEffect runs once when component mounts
 
   return (
-    <div>
-      <ToastContainer />
+    <React.Fragment>
       <div className="heading">
-        <h1>Hot Deals</h1>
+        <h1>
+          {" "}
+          <FontAwesomeIcon icon={faFire} /> Hot Deals
+        </h1>
       </div>
-      <div className="product-list">
-        <ul className="list-comp">
-          <AnimatePresence>
-            {isVisible &&
-              data.map((product, index) => (
-                <motion.li
-                  key={index}
-                  initial={{ opacity: 0, y: -20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -20 }}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  <img
-                    className="product-image"
-                    src={product.image}
-                    alt={product.name}
-                  />
+
+      <div className="main-slide">
+        <ToastContainer />
+
+        <div className="product-list">
+          <ul className="list-comp">
+            {data.map((product, index) => (
+              index < 6 && (
+                <li key={index}>
+                  <img className="product-image" src={product.image} alt={product.name} />
+
                   <div className="numericals">
                     <p>₹{product.price}</p>
                     <p>
@@ -62,15 +65,16 @@ const ProductsComp = () => {
                     <h3>{product.name}</h3>
                     <StarRating rating={product.rating} />
                   </div>
-                  <button className="btn__clr" onClick={successNotify}>
+                  <button className="btn__clr" onClick={() => successNotify(product)}>
                     Add to Cart +
                   </button>
-                </motion.li>
-              ))}
-          </AnimatePresence>
-        </ul>
+                </li>
+              )
+            ))}
+          </ul>
+        </div>
       </div>
-    </div>
+    </React.Fragment>
   );
 };
 
