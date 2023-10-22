@@ -1,6 +1,6 @@
 # MERN Stack E-Commerce with Admin Panel
 
-##Project Overview
+## Project Overview
 
 This project is a feature-rich eCommerce web application built using the MERN (MongoDB, Express.js, React.js, Node.js) stack. Below is an overview of the key functionalities implemented:
 
