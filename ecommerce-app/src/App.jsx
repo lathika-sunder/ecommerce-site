@@ -15,6 +15,7 @@ import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 
 import ProductsComp from "./components/ProductsComp/ProductsComp";
+import AddDataPage from "./pages/AddData/AddDataPage";
 function App() {
   return (
     <>
@@ -31,11 +32,11 @@ function App() {
           <Route exact path="/checkout" element={<CheckoutPage />}></Route>
           <Route exact path="/signup" element={<SignUpPage />}></Route>
           <Route exact path="/login" element={<LoginPage />}></Route>
-     
-       
             <Route exact path="/home" element={<HomePage />}></Route>
             <Route exact path="/shop" element={<ShopPage />}></Route>
             <Route exact path="/cart" element={<CartPage />} />
+            <Route exact path="/add-data" element={<AddDataPage />}></Route>
+            
           </Routes>
   
       </BrowserRouter>
