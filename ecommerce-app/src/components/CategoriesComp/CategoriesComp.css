@@ -1,0 +1,28 @@
+.category-img{
+    width: 50vh;
+    height: 30vh;
+}
+.img-grid{
+    display: flex;
+    text-align: center;
+    flex-wrap: wrap;
+}
+.grid-list{
+   border-right:1vh solid black;
+   background: linear-gradient(to right, rgb(52, 232, 82), rgb(15, 52, 67));
+   border-bottom: 0.5px solid black;
+   border-bottom-right-radius: 2vh;
+   width: 75vh;
+   border-top-right-radius: 2vh;
+    display: flex;
+    flex-direction: row;
+    margin: 2vh;
+    text-align: center;
+    cursor: pointer;
+}
+li h3{
+    padding-left: 1vh;
+    padding-top: 18%;
+    color: aliceblue;
+    
+}

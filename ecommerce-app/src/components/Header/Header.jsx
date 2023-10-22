@@ -5,6 +5,8 @@ import { Container, Row } from "reactstrap";
 import logo from "../../assets/images/logo.png";
 import { Link } from "react-router-dom";
 import usericon from "../../../src/assets/images/usericon.png";
+import { motion } from "framer-motion";
+import SearchComp from "../SearchComp/SearchComp";
 const Header = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
 const[isClicked,setIsClicked]=useState(false)
@@ -33,7 +35,7 @@ const[isClicked,setIsClicked]=useState(false)
                   <p>The Best In Market</p>
                 </div>
               </div>
-
+<SearchComp />
               <div className="navigation">
                 <div className="menu">
                   <li className="nav__item">
@@ -112,7 +114,7 @@ const[isClicked,setIsClicked]=useState(false)
                 <span className="user-img"
                 onClick={toggleMenu} >
                   
-                  <img src={usericon} alt="profile"  />
+                  <motion.img whileTap={{scale:1.2}} src={usericon} alt="profile"  />
                 </span>
               </div>
             </div>

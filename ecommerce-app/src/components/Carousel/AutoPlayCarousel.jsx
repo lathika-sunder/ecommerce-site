@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./autoplaycarousel.css";
-
+import groceries from "../../../src/assets/images/groceries.png";
 const AutoPlayCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const images = [
@@ -13,7 +13,7 @@ const AutoPlayCarousel = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 3000); // Change the interval (in milliseconds) to adjust the speed of the carousel
+    }, 3500); // Change the interval (in milliseconds) to adjust the speed of the carousel
 
     return () => {
       clearInterval(interval);
@@ -28,19 +28,36 @@ const AutoPlayCarousel = () => {
           alt={`carousel-image-${currentIndex}`}
         />
       </div>
-      <div className="content">
-        <div className="headers">
-          <h1>Fresh.</h1>
-          <h1>From.</h1>
-          <h1>Farm.</h1>
+
+      <div className="container">
+        <div className="spl-box">
+          <h4>
+            Special <br />
+            <span>Offers</span>
+          </h4>
+          <img src={groceries}></img>
         </div>
-        <div className="paragraph">
-        <p> Our farmers work tirelessly to bring you a diverse selection of fresh, organic items, including seasonal fruits, vegetables, grains, and dairy products. With every bite, you'll taste the difference that comes from our dedication to organic excellence.</p>
+        <div className="content">
+          <div className="paragraph">
+            <p>
+              {" "}
+              Our farmers work tirelessly to bring you a diverse selection of
+              fresh, organic items, including seasonal fruits, vegetables,
+              grains, and dairy products.{" "}
+            </p>
+          </div>
+
+          <div className="button">
+            <button className="btn__plain">
+              Buy Now
+              <div className="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
+                </svg>
+              </div>
+            </button>
+          </div>
         </div>
-        
-       <div className="button">
-       <button className="btn__plain">Buy Now</button>
-       </div>
       </div>
     </div>
   );

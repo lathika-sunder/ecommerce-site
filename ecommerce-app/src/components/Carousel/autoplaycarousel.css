@@ -1,32 +1,73 @@
 /* Default styles for larger screens */
 .image img {
-  height: 85vh;
-  width: 150vh;
+  height: 60vh;
+  width: 100vh;
   padding: 3vh;
+  transition: opacity 0.5s ease;
 }
 
 .main-slide {
   display: flex;
   flex-direction: row;
-  background-color: rgb(24, 27, 21);
+  /* margin: 4vh; */
+
+  background: linear-gradient(to right, rgb(52, 232, 82), rgb(15, 52, 67));
 }
 
 .content {
-  color: aliceblue;
+  color: rgb(255, 255, 255);
+}
+.spl-box {
+  position: relative;
+  
+  letter-spacing: 0.5vh;
+  color: rgb(0, 0, 0); /* Text color */
+}
+.spl-box img{
+  width: 80vh;
+  height: 40vh;
+  padding: 2vh;
+  text-align: left;
+}
+
+.spl-box h4 {
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  text-align: left;
+  transform: translate(-50%, -50%);
+  font-size: 24px; /* Adjust the font size as needed */
+}
+
+.icon svg{
+  height: 2vh;
+  color: rgb(47, 255, 95);
 }
 
 .btn__plain {
-  border: 1px solid #1d7431;
+  display: flex;
+  flex-direction: row;
+  border: 2vh solid #1d7431;
   background-color: white;
   padding: 2vh;
   color: rgb(0, 0, 0);
   cursor: pointer;
   border-radius: 10px;
   margin:2vh;
+  
 }
-
+.btn__plain:hover{
+  transition: all .2s ease-in-out;
+  box-shadow: 0 0 10px rgba(0,0,0,.5);
+  background-color: #02a528;
+  color: rgb(234, 255, 202);
+}
+.button{
+  display: flex;
+  justify-content: center;
+}
 .headers {
-  padding: 3vh;
+  padding: 2vh;
   font-size: larger;
   font-weight: bold;
   font-style: italic;
@@ -65,5 +106,53 @@
   .paragraph {
     font-size: 1.8vh;
     line-height: 3vh;
+  }
+}
+/* Default styles for larger screens */
+/* ... your existing styles ... */
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .image img {
+   
+    width: 90vw;
+    padding: 2vh;
+  }
+  
+  .main-slide {
+    flex-direction: column;
+  }
+  .spl-box{
+    -ms-flex-order: 3;
+  }
+  .spl-box img {
+    width: 90vw;
+    height: auto;
+    padding: 1.5vh;
+    text-align: center;
+    
+  }
+  
+  
+
+  .headers {
+    font-size: 4vh;
+    text-align: center;
+  }
+
+  .paragraph {
+    font-size: 2vh;
+    line-height: 3vh;
+    text-align: center;
+    margin: 2vh;
+  }
+  
+  .btn__plain {
+    padding: 2vh 4vw;
+    font-size: 2vh;
+  }
+
+  .button {
+    margin: 2vh 0;
   }
 }

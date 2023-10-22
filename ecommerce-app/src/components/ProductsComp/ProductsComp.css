@@ -1,0 +1,52 @@
+.list-comp li{
+    height: 40vh;
+    margin: 3vh;
+    width: 40vh;
+    border: 0.5px rgb(1, 5, 4) solid;
+    border-radius: 2vh;
+    background-color: rgb(255, 255, 255);
+    padding: 2vh;
+}
+.list-comp li:hover{
+    cursor: pointer;
+    box-shadow: 3px 6px 8px rgb(35, 111, 5), 0 -7px
+    9px rgba(0,0,0,.2);
+    transform: scale(1.01);
+
+}
+.list-comp h3{
+    color: black;
+    font-size: 3vh;
+    padding: 0px;
+}
+.list-comp{
+    cursor: pointer;
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.product-image{
+    height: 25vh;
+}
+.numericals{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.product-info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.list-comp  .btn__clr{
+    height:2vh;
+    font-size: 2vh;
+    text-align: center;
+    justify-content: start;
+    padding: 2vh;
+    padding-bottom: 4vh;
+  
+}
